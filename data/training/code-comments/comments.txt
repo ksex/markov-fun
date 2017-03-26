@@ -1,0 +1,46 @@
+fetch oAuth2 credentials for communication with cerebro
+Returns a formatted discovery url
+add a new url to the site_user pool
+get the response for a url
+Calls search API for facets. On failure reloads discovery api
+Validate email
+create user
+Sets additional context variables based on user agent.
+Sets is_mobile to false if user-agent is desktop.
+Sets additional context variables for our custom locale/region requirements.
+Gets our custom locale code from the language code in the request to pass to the front end.
+Tests the user's location via the country code header provided by GAE and the locale code. Provides a boolean value for front end to determine whether or not to display the butter bar.
+Checks if a country is within a user's requested locale, and whether that country exists within our country/locale whitelist dictionary.
+Intercepts custom i18n language codes to render translated pages. We do not look at headers since that doesn't meet the site requirements.
+Sets the language based on our custom codes.
+Prefetch relations and add to context:
+This will still have 1 query per page to get 'specific'
+Custom Document model. Extends default Wagtail Document by adding: - alt text field
+Property to get documents alt text
+Receive the pre_delete signal and delete the file associated with the model instance.
+Overrides get_rendition to catch IOError thrown by PIL 1.1.7 (the latest available on App Engine) when saving larger images with optimize=True, progressive=True, as wagtail does starting in v1.7.
+Property for returning latest leaderboards use in a template.
+Display name to be rendered in the article template for the end user.
+Captures the content of the block to a variable within the template which can then be tested for existence.
+Creates a tag to easily use responsive images with srcsets in templates.
+Sets the site for our custom path'd i18n content
+Related Content with Chooser for detail pages
+Captures the "locale" after the /intl pattern and then matches the rest of the string to pass to the serve function to build custom URLs for our own i18n patterns.
+Customizes the TinyMCE Rich text area to have fewer features.
+Utility for scrubbing index.html from path or add a trailing slash to paths
+Overwrites the default save with the following changes: - Sets email as username
+Django user model backend used for authorization only. Authentication is disabled.
+Utility for retrieving the bucket name for Google Cloud Storage, either from settings or the default app bucket.
+Google Cloud Storage backend based on djangae:
+Set the session expiry according to settings
+A decorator for allowing class methods to be used as properties.
+Finds the location of the GAE SDK. Assumes `dev_appserver.py` is on your PATH - SDK installers set this up. Will fail if called within running dev_appserver due to stubs and os mocks from the sdk.
+Adds the GAE SDK to the path if not already set.
+Utility for checking if running in django tests.
+Utility for checking if running on local dev server accounts for both GAE and django dev servers
+Checks if local or author node. Set LOCAL_PUBLISH to run a publish node.
+Returns a host name based on project, app engine instance, then default.
+Checks if GAE sdk/stubs are loaded and not just added to the path.
+Returns the application configuration, creating it if necessary (for local development).
+WSGI config for quicksilver project.
+It exposes the WSGI callable as a module-level variable named ``application``.
